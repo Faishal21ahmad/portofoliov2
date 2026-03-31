@@ -1,0 +1,27 @@
+import { skill } from "@/types/skillsType";
+
+export const skills: skill[] = [
+    { name: "CSS", icon: "/icons/css.png", },
+    { name: "HTML", icon: "/icons/html 1.png", },
+    { name: "JavaScript", icon: "/icons/js.png", },
+    { name: "Php", icon: "/icons/php.png", },
+    { name: "C++", icon: "/icons/cpp.png", },
+    { name: "Laravel", icon: "/icons/laravel.png", },
+    { name: "Livewire", icon: "/icons/livewire.png", },
+    { name: "Tailwind CSS", icon: "/icons/tailwindcss.png", },
+    { name: "React.js", icon: "/icons/reactjs.png", },
+    { name: "Node.js", icon: "/icons/nodejs.png", },
+    { name: "Next.js", icon: "/icons/nextjs.png", },
+    { name: "Express.js", icon: "/icons/expressjs.png", },
+    { name: "SQL", icon: "/icons/sql.png", },
+    { name: "Git", icon: "/icons/git.png", },
+    { name: "Docker", icon: "/icons/docker.png", },
+    { name: "Linux", icon: "/icons/linux.png", },
+    { name: "Python", icon: "/icons/python.png", },
+    { name: "Flask", icon: "/icons/flask.png", },
+    { name: "Mikrotik", icon: "/icons/mikrotik.png", },
+    { name: "Proxmox", icon: "/icons/proxmox.png", },
+    { name: "AWS", icon: "/icons/aws.png", },
+    { name: "Postman", icon: "/icons/postman.png", },
+    // { name: "", icon: "", },
+];

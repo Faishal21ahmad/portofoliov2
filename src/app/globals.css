@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* fallback to system preference when no explicit data-theme is set */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Light-theme overrides for Tailwind utility classes used across the project.
+   These help keep existing Tailwind classes readable when switching to light mode.
+   We use attribute selector [data-theme="light"] applied on <html>.
+*/
+
+[data-theme="light"] .text-white,
+[data-theme="light"] [class*="text-white/"] {
+  color: var(--foreground) !important;
+}
+
+[data-theme="light"] .bg-slate-900,
+[data-theme="light"] [class*="bg-[#030712]"] {
+  background-color: var(--background) !important;
+}
+
+/* ensure borders/shadows that assume light-on-dark are toned down in light mode */
+[data-theme="light"] .border-white\/25,
+[data-theme="light"] .border-b-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* subtle transition */
+body,
+html {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.card2 {
+  background-color: rgb(243 244 246 / 0.05);
+  /* bg-gray-100/5 */
+  backdrop-filter: blur(2px);
+  /* backdrop-blur-xs */
+  border: 1px solid rgb(3 7 18 / 0.1);
+  /* border border-gray-950/10 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  /* shadow-md */
+  padding: 0.75rem;
+  /* p-3 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* gap-2 */
+  transition-property: transform;
+  transition-duration: 200ms;
+}
+
+.card2:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  /* hover:shadow-lg */
+  transform: scale(1.35);
+  /* hover:scale-135 */
+  z-index: 20;
+  /* hover:z-20 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .card2 {
+    background-color: rgb(100 116 139 / 0.1);
+    /* dark:bg-slate-500/10 */
+    border: none;
+    /* dark:border-0 */
+  }
+}
+
+
+@layer components {
+  .card3 {
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(243 244 246 / 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgb(3 7 18 / 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 200ms;
+  }
+
+  @media (min-width: 768px) {
+    .card3 {
+      padding: 0.75rem;
+    }
+  }
+
+  .card3:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transform: translateY(-0.5rem) scale(1.1);
+    z-index: 20;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card3 {
+      background-color: rgb(100 116 139 / 0.1);
+      border: none;
+    }
+  }
+}
+
+@layer components {
+  .card1 {
+    position: relative;
+    background-color: rgb(255 255 255 / 0.5);
+    border-radius: 0.5rem;
+    border: 1px solid rgb(3 7 18 / 0.1);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 200ms;
+    backdrop-filter: blur(4px);
+  }
+
+  .card1:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transform: translateY(-0.5rem) scale(1.05);
+    z-index: 20;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card1 {
+      background-color: rgb(100 116 139 / 0.1);
+      border: none;
+    }
+  }
+}
