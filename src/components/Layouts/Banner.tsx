@@ -30,19 +30,19 @@ export default function Banner() {
             >
                 <div className="banner-track">
                     <Image
-                        src="/img/banner.png"
+                        src="/img/banner.jpg"
                         alt="Banner"
-                        width={1000}
-                        height={384}
+                        width={3000}
+                        height={500}
                         className="h-56 md:h-96 w-auto object-cover"
                         loading="eager"
                         unoptimized
                     />
                     <Image
-                        src="/img/banner.png"
+                        src="/img/banner.jpg"
                         alt="Banner"
-                        width={1000}
-                        height={384}
+                        width={3000}
+                        height={500}
                         className="h-56 md:h-96 w-auto object-cover"
                         loading="eager"
                         unoptimized
