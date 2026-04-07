@@ -25,7 +25,7 @@ export default function page() {
     }
 
     return (
-        <main className="container mx-auto py-5 px-4 md:px-0">
+        <main className="container mx-auto py-5 px-4 md:px-0 scroll-mt-16">
             <div className="mb-6">
                 <Link
                     href="/#projects"
@@ -37,15 +37,20 @@ export default function page() {
                     Back to Projects
                 </Link>
             </div>
+
             {/* Banner / Gambar Utama */}
-            <div className="relative w-full h-52 md:h-96 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                    src={project.images[0].url ?? "/default.png"}
-                    alt={project.title ?? "Project image"}
-                    fill
-                    className="object-cover"
-                    priority
-                />
+            <div className="relative h-56 sm:h-56 hover:md:h-85 hover:lg:h-120 hover:xl:h-150 transition-all duration-300 rounded-lg shadow-lg overflow-hidden flex items-center justify-center">
+                <Link href={`/project/${id}/#gallery`} >
+                    <Image
+                        src={project.images[0].url ?? "/default.png"}
+                        alt={project.title ?? "Project image"}
+                        width={1920}
+                        height={1080}
+                        className="w-full object-contain transition-all duration-300 rounded-lg"
+                        priority
+                        unoptimized
+                    />
+                </Link>
             </div>
 
             {/* Info Utama */}
@@ -117,7 +122,7 @@ export default function page() {
 
             {/* Galeri Gambar */}
             {project.images?.length > 0 && (
-                <div className="mt-10">
+                <div id="gallery" className="mt-10 scroll-mt-20">
                     <h2 className="text-xl font-semibold mb-3">Gallery</h2>
                     <Gallery images={project.images} title={project.title} />
                 </div>

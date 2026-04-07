@@ -14,7 +14,6 @@ export default function Card3({ data }: CardProps) {
 
     return (
         <div className="card3">
-            {/* Main link — full cover absolute */}
             <Link href={href} className="absolute inset-0 z-10" aria-label={title} />
 
             <div className="rounded-md overflow-hidden h-60">
@@ -27,8 +26,6 @@ export default function Card3({ data }: CardProps) {
                     priority
                     unoptimized
                 />
-
-                {/* Button links — z-index lebih tinggi dari main link */}
                 <div className="absolute top-4 right-4 flex gap-1 z-20">
                     {url_github && (
                         <Link
