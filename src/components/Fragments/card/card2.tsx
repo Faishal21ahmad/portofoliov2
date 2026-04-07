@@ -15,10 +15,11 @@ export default function card1(props: skill) {
                 <Image
                     src={image}
                     alt="icons skills"
-                    className="scale-85"
+                    className="scale-80"
                     width={300}
                     height={300}
                     priority
+                    unoptimized
                 />
             </div>
             <span className="font-semibold text-lg text-center">

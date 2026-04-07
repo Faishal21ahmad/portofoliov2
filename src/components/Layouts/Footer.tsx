@@ -4,7 +4,7 @@ type AlinkProps = { title: string, link: string };
 
 function Alink({ title, link }: AlinkProps) {
     return (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black dark:text-white/50   hover:dark:text-white transition">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black dark:text-white/50 hover:dark:text-white transition">
             {title}
         </a>
     );

@@ -38,13 +38,11 @@ export default function page() {
                 </Link>
             </div>
             {/* Banner / Gambar Utama */}
-            <div className="relative w-full h-52 md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full h-52 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
                     src={project.images[0].url ?? "/default.png"}
                     alt={project.title ?? "Project image"}
                     fill
-                    sizes="100vw"
-                    loading="eager"
                     className="object-cover"
                     priority
                 />

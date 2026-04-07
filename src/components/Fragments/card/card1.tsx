@@ -18,8 +18,9 @@ export default function card1(props: sertificate) {
                     src={image}
                     alt={title}
                     className="scale-125"
-                    width={1920}
-                    height={384}
+                    width={1242}
+                    height={782}
+                    unoptimized
                     priority
                 />
             </div>

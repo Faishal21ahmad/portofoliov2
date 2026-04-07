@@ -37,14 +37,14 @@ export default function Gallery({ images, title }: GalleryProps) {
                     <div
                         key={idx}
                         onClick={() => openImage(idx)}
-                        className="relative h-48 rounded-lg overflow-hidden cursor-pointer group"
+                        className="relative h-48  rounded-lg overflow-hidden cursor-pointer group"
                     >
                         <Image
                             src={img.url}
                             alt={`${title} ${idx}`}
                             fill
-                            loading="eager"
-                            sizes="100vw"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            priority
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -63,6 +63,8 @@ export default function Gallery({ images, title }: GalleryProps) {
                             src={images[selectedIndex].url}
                             alt={`${title} preview`}
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            unoptimized
                             className="object-contain"
                         />
 

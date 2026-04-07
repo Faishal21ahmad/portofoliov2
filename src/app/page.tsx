@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <main className="top-44 w-full text-black dark:text-white ">
+      <main className="top-44 w-full text-black dark:text-white">
         <Saction id="cta" bgcolor="bg-gray-100 dark:bg-slate-900" classname="py-10 md:py-0">
           <div className="py-6 px-4 md:py-12 md:px-12 flex flex-col md:flex-row items-center gap-6 container mx-auto">
             <div className="shrink-0">
@@ -29,6 +29,7 @@ export default function Home() {
                 height={384}
                 className="w-48 h-48 md:w-56 md:h-56 border-4 border-white/90 shadow-lg rounded-2xl object-cover"
                 priority
+                unoptimized
               />
             </div>
 
@@ -61,12 +62,8 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1dOf1ZaL8U9B2JjsJUTgliGRJ_WZENEYk/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-1.5 rounded-lg cursor-pointer text-lg transition-all duration-200 bg-gray-200 dark:bg-slate-500/20 hover:bg-gray-300/80 dark:hover:bg-slate-500/40 flex items-center gap-2">
-                  <span className="italic font-bold">Download</span> CV
-                  <picture>
-                    <source srcSet="/icons/polygon-light.png" media="(prefers-color-scheme: dark)" />
-                    <img src="/icons/polygon-dark.png" alt="downloadcv" className="ml-3" />
-                  </picture>
+                  className="px-4 py-1.5 rounded-lg cursor-pointer text-lg  transition-all duration-200 bg-gray-200 dark:bg-slate-500/20 hover:bg-gray-300/80 dark:hover:bg-slate-500/40 flex items-center gap-2">
+                  <span className="italic font-bold">Download</span> CV <span className="-mt-1 pl-2 scale-90">▶</span>  
                 </Link>
               </div>
             </div>

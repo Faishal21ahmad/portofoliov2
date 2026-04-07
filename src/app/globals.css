@@ -113,6 +113,11 @@ html {
     flex-direction: column;
     gap: 0.5rem;
     transition: all 200ms;
+
+    /* Fix touch di mobile */
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (min-width: 768px) {
