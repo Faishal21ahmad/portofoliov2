@@ -27,8 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}  >
-        <div className="static w-full pt-16 bg-white dark:bg-slate-950 h-auto">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-slate-950 h-auto relative`}  >
+        <div className="fixed h-screen w-full z-10 top-0 bg-white dark:bg-slate-950 bg-[url(/img/bg-white.png)] dark:bg-[url(/img/bg.png)] bg-center bg-repeat"></div>
+        <div className="absolute z-20 top-0 w-full pt-16 text-black dark:text-white">
           <Nav />
           {children}
           <Footer />

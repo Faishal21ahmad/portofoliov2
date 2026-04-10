@@ -16,21 +16,18 @@ export default function Nav() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="fixed h-auto top-0 left-0 w-full z-50 bg-white/20 dark:bg-black/10 backdrop-blur-xs flex flex-col">
+        <nav className="fixed h-auto top-0 left-0 w-full z-50 bg-white/10 dark:bg-black/5 text-black dark:text-white backdrop-blur-xs flex flex-col">
             <div className="container mx-auto flex items-center justify-between h-16 px-4">
-                <div className="flex gap-6 items-center justify-between mx-auto w-full text-black dark:text-white">
+                <div className="flex gap-6 items-center justify-between mx-auto w-full text-wrap mix-blend-difference">
                     <Link href="/">
-                        <h1 className="text-lg font-semibold text-black dark:text-white">{NAV_TITLE}</h1>
+                        <h1 id="title" className="text-lg font-bold  mix-blend-difference">{NAV_TITLE}</h1>
                     </Link>
 
                     {/* Desktop */}
                     <ul className="hidden md:flex flex-row items-center gap-3">
                         {NAV_ITEMS.map(({ label, href }) => (
                             <li key={label}>
-                                <Link
-                                    href={href}
-                                    className="px-3 py-2 rounded-lg text-base transition-all duration-200 active:scale-95 hover:bg-black/5 dark:hover:bg-white/15"
-                                >
+                                <Link href={href} className="px-3 py-2 rounded-lg text-lg transition-all duration-200 active:scale-95 hover:bg-black/5 dark:hover:bg-white/15">
                                     {label}
                                 </Link>
                             </li>
@@ -58,14 +55,14 @@ export default function Nav() {
             </div>
 
             {/* Mobile */}
-            <div className={`md:hidden overflow-hidden transition-all duration-300 ease-out text-black dark:text-white ${open ? "max-h-96" : "max-h-0"}`}>
+            <div className={`md:hidden overflow-hidden transition-all duration-300 ease-out  text-black dark:text-white ${open ? "max-h-96" : "max-h-0"}`}>
                 <ul className="p-3 gap-2">
                     {NAV_ITEMS.map(({ label, href }) => (
                         <li key={label}>
                             <Link
                                 href={href}
                                 onClick={() => setOpen(false)}
-                                className="block px-3 py-2 rounded-lg text-base transition-all duration-200 hover:bg-black/10 dark:hover:bg-white/15 active:scale-95"
+                                className="block  px-3 py-2 rounded-lg text-base transition-all duration-200 hover:bg-black/10 dark:hover:bg-white/15 active:scale-95"
                             >
                                 {label}
                             </Link>

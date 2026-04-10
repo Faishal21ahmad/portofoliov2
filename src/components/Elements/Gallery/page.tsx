@@ -37,6 +37,8 @@ export default function Gallery({ images, title }: GalleryProps) {
         if (e.key === 'Escape') closeModal();
     };
 
+    const btnNavClass = "absolute cursor-pointer -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full z-10 mix-blend-difference";
+
     return (
         <>
             {/* Grid Galeri */}
@@ -84,21 +86,21 @@ export default function Gallery({ images, title }: GalleryProps) {
 
                     <button
                         onClick={prevImage}
-                        className="absolute cursor-pointer left-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full pt-2 md:pt-1 pb-2 px-3 text-xs md:text-lg lg:text-xl z-10 mix-blend-difference"
+                        className={`left-3 top-1/2 pt-2 md:pt-1 pb-2 px-3 text-xs md:text-lg lg:text-xl ${btnNavClass}`}
                     >
                         ◀
                     </button>
 
                     <button
                         onClick={nextImage}
-                        className="absolute cursor-pointer right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full pt-2 md:pt-1 pb-2 px-3 text-xs md:text-lg lg:text-xl z-10 mix-blend-difference"
+                        className={`right-3 top-1/2 pt-2 md:pt-1 pb-2 px-3 text-xs md:text-lg lg:text-xl ${btnNavClass}`}
                     >
                         ▶
                     </button>
 
                     <button
                         onClick={closeModal}
-                        className="absolute cursor-pointer top-4 right-4 text-white bg-white/10 hover:bg-gray-900 rounded-full px-3 py-2 font-bold z-10"
+                        className={`top-4 right-4 px-3 py-2 font-bold ${btnNavClass}`}
                     >
                         ✕
                     </button>

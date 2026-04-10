@@ -18,12 +18,12 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <main className="top-44 w-full text-black dark:text-white">
-        <Saction id="cta" bgcolor="bg-gray-100 dark:bg-slate-900 scroll-mt-16" classname="py-10 md:py-0 scroll-mt-20">
+      <main className="top-44 w-full">
+        <Saction id="cta" bgcolor="bg-gray-100/80 dark:bg-slate-900/80 scroll-mt-16" classname="py-10 md:py-0">
           <div className="py-6 px-4 md:py-12 md:px-12 flex flex-col md:flex-row items-center gap-6 container mx-auto">
             <div className="shrink-0 ">
               <Image
-                src="/pp2.png"
+                src="/img/pp2.png"
                 alt="photo-profile"
                 width={400}
                 height={384}
@@ -59,7 +59,7 @@ export default function Home() {
                   </picture>
                 </Link>
                 <Link
-                  href="https://drive.google.com/file/d/1dOf1ZaL8U9B2JjsJUTgliGRJ_WZENEYk/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1u1urMOuyJNPfyFF9AP7_E4m2shY0h3FU/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-1.5 rounded-lg cursor-pointer text-lg  transition-all duration-200 bg-gray-200 dark:bg-slate-500/20 hover:bg-gray-300/80 dark:hover:bg-slate-500/40 flex items-center gap-2">
@@ -76,7 +76,7 @@ export default function Home() {
             <p className="text-xl text-justify">seorang Web Developer yang juga memiliki ketertarikan di bidang infrastruktur IT. Dalam membangun aplikasi, terbiasa dengan tech stack Laravel, Tailwind CSS, dan React untuk menghasilkan sistem yang terstruktur, responsif, dan efisien. Tak hanya itu, saya juga mendalami pengelolaan server, deployment aplikasi, serta konfigurasi lingkungan on-premise maupun cloud memastikan sistem yang dibangun tidak hanya berfungsi, tetapi juga berjalan stabil dan optimal.</p>
           </div>
         </Saction>
-        <Saction id="certification" bgcolor="bg-gray-100 dark:bg-slate-900" classname="flex-col gap-10 py-20">
+        <Saction id="certification" bgcolor="bg-gray-100/80 dark:bg-slate-900/80" classname="flex-col gap-10 py-20">
           <Titlesaction title="CERTIFICATION" />
           <div className="w-full justify-center gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 container mx-auto">
             {sertificates.map((item, index) => (

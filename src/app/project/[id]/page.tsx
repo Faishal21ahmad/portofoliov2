@@ -88,7 +88,7 @@ export default function page() {
                     </h2>
                     <div className="flex flex-wrap gap-2">
                         {project.list_stack.map((tech, index) => (
-                            <span key={index} className={`text-md px-2 py-1 ${btnStyle}`}>
+                            <span key={index} className={`text-md px-3 py-1 bg-gray-700/10 dark:bg-white/10 rounded-md capitalize`}>
                                 {tech}
                             </span>
                         ))}

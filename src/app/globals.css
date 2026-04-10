@@ -31,8 +31,8 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  /* background: var(--background);
+  color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -63,12 +63,34 @@ html {
   transition: background-color 180ms ease, color 180ms ease;
 }
 
+@keyframes scroll-banner {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-banner 50s linear infinite;
+}
+
+.banner-track:hover {
+  animation-play-state: paused;
+}
+
+
+
 .card2 {
   background-color: rgb(243 244 246 / 0.05);
   /* bg-gray-100/5 */
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2.5px);
   /* backdrop-blur-xs */
-  border: 1px solid rgb(3 7 18 / 0.1);
+  border: 0.5px solid rgb(3 7 18 / 0.1);
   /* border border-gray-950/10 */
   border-radius: 0.5rem;
   /* rounded-lg */
@@ -108,7 +130,7 @@ html {
     cursor: pointer;
     position: relative;
     background-color: rgb(243 244 246 / 0.05);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2.5px);
     border: 1px solid rgb(3 7 18 / 0.1);
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -156,7 +178,7 @@ html {
     flex-direction: column;
     gap: 0.5rem;
     transition: all 200ms;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2.5px);
   }
 
   .card1:hover {

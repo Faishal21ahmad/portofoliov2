@@ -67,12 +67,12 @@ export default function Card3({ data }: CardProps) {
                 </div>
             </div>
 
-            <div className="p-2">
-                <span className="font-semibold text-xl text-dark dark:text-white">{title}</span>
+            <div className="p-2 text-black dark:text-white">
+                <span className="font-semibold text-xl">{title}</span>
                 <p className="text-md text-black/70 dark:text-white/70 line-clamp-3">{description}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                     {list_stack.map((tech, index) => (
-                        <span key={index} className="bg-slate-800 text-white text-xs px-2 py-1 rounded">
+                        <span key={index} className="bg-gray-300 dark:bg-slate-800 text-xs px-2 py-1 rounded-md">
                             {tech}
                         </span>
                     ))}

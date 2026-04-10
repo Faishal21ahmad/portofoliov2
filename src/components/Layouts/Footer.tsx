@@ -12,7 +12,7 @@ function Alink({ title, link }: AlinkProps) {
 
 export default function Footer() {
     return (
-        <footer className="relative w-full h-72 md:h-full bg-gray-100 dark:bg-slate-900">
+        <footer className="relative w-full h-72 md:h-full bg-gray-100/80 dark:bg-slate-900/80">
             <div className="container flex justify-between w-full mx-auto p-10 gap-4">
                 <div className=""></div>
                 <div className="">
